@@ -1,1 +1,8 @@
-<script>var clicky_site_ids = clicky_site_ids || []; clicky_site_ids.push(101266234);</script>
+<script type="text/discourse-plugin" version="0.8">
+  const site_id = settings.clicky_site_id;
+  if (site_id) {
+    var clicky_site_ids = clicky_site_ids || []; clicky_site_ids.push(site_id);
+  } else {
+    console.error("click_site_id not set - Clicky support disabled");
+  }
+</script>
